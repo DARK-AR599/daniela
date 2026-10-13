@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generador de QR</title>
+<style>body{font-family:system-ui;background:#10101c;color:#fff;display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px}
+input{width:min(90vw,460px);padding:12px;border-radius:10px;border:0;font-size:1rem}button{padding:12px 22px;border:0;border-radius:999px;background:#ff5fa8;color:#fff;font-weight:700;cursor:pointer}
+#qr{background:#fff;padding:16px;border-radius:14px}</style></head><body>
+<h2>QR de tu proyecto ♥</h2>
+<input id="url" placeholder="https://tu-proyecto.netlify.app">
+<div><button onclick="gen()">Generar</button> <button onclick="dl()">Descargar PNG</button></div>
+<div id="qr"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const u=document.getElementById('url');u.value=location.protocol.startsWith('http')?location.origin+'/':'';
+function gen(){const q=document.getElementById('qr');q.innerHTML='';new QRCode(q,{text:u.value,width:280,height:280,correctLevel:QRCode.CorrectLevel.H})}
+function dl(){const c=document.querySelector('#qr canvas');if(!c)return alert('Primero genera el QR');const a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='qr-proyecto.png';a.click()}
+gen();
+</script></body></html>

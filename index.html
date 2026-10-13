@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para ti ♥</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Montserrat:wght@800&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div id="floaties"></div>
+<div id="yt-wrap"><div id="yt"></div></div>
+
+<!-- 0. Pantalla de inicio (necesaria para que el navegador permita el audio) -->
+<section class="stage on" id="s-start">
+  <button id="btn-start" class="pill">Toca para comenzar ♥</button>
+</section>
+
+<!-- 1. Lluvia rosa + cuenta regresiva + palabras -->
+<section class="stage" id="s-matrix">
+  <canvas id="rain"></canvas>
+  <div id="bigtext"></div>
+  <div id="bigheart">♥</div>
+</section>
+
+<!-- 2. Cielo estrellado + 3. carta -->
+<section class="stage" id="s-sky">
+  <div class="float-emoji">👑</div>
+  <p id="sky-msg"></p>
+  <div id="card" role="button" tabindex="0">
+    <div class="card-heart">♥</div>
+    <div class="card-hands">🤲</div>
+    <small id="card-text"></small>
+  </div>
+</section>
+
+<!-- 4. Libro -->
+<section class="stage" id="s-book">
+  <div id="topbox">
+    <a id="dino-link" target="_blank" rel="noopener" title="Escuchar la canción en YouTube">
+      <img id="dino" src="assets/dino.webp" alt="Dinosaurio">
+    </a>
+    <div id="phrase-wrap"><div id="phrase"></div></div>
+  </div>
+
+  <div id="book-area">
+    <aside id="lyrics">
+      <h4 id="lyrics-title"></h4>
+      <div id="lyrics-view"><div id="ly-now"></div></div>
+    </aside>
+    <div id="book-col">
+      <div id="book"></div>
+      <div id="nav">
+        <button id="prev" class="round" aria-label="Anterior">‹</button>
+        <span id="counter"></span>
+        <button id="next" class="round" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Final: corazón de fotos -->
+<section class="stage" id="s-end">
+  <div id="heart-cloud"></div>
+  <p id="end-msg"></p>
+  <button id="btn-back" class="pill small">↺ Volver al libro</button>
+</section>
+
+<button id="mute" class="round" aria-label="Música">🔊</button>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
