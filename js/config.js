@@ -35,7 +35,7 @@ const CONFIG = {
     { foto: "assets/fotos/foto09.jpg", frase: "No cambiaría ni un solo momento" },
     { foto: "assets/fotos/foto10.jpg", frase: "Te quiero muchísimo ♥" }
   ],
-  FRASE_FINAL: "Los detalles no tienen fecha, solo intención ♥",   // se ve al cerrar el libro y en la pantalla final
+  FRASE_FINAL: "🌷 Feliz aniversario, mi amor Sigamos escribiendo nuestra historia más bonita ♥",   // se ve al cerrar el libro y en la pantalla final
 
   // ---- Portada del libro (se ve cerrado; al tocarla se abre y recién ahí aparecen las fotos) ----
   TITULO_PORTADA: "Para ti",
